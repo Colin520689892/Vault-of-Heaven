@@ -9,24 +9,30 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sky-common</artifactId>
+
     <dependencies>
+<!--自动生成get,set-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+<!--进行序列化和反序列化-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>2.0.0</version>
         </dependency>
+<!--Apache Commons Lang是Apache软件基金会的一个开源项目，提供了许多通用的工具类和方法，用于处理字符串、日期、集合等Java编程中常见的任务。-->
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
         </dependency>
+<!--Spring Boot Starter JSON是Spring Boot提供的一个Starter依赖，用于支持JSON数据的序列化和反序列化，通常用于RESTful API的开发。-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
         </dependency>
+<!--JJWT（Java JWT）是一个Java编写的JWT（JSON Web Token）的库，用于在Java应用程序中生成和验证JWT令牌，用于实现基于令牌的身份验证和授权。-->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
@@ -41,6 +47,7 @@
             <groupId>com.aliyun.oss</groupId>
             <artifactId>aliyun-sdk-oss</artifactId>
         </dependency>
+<!--JAXB（Java Architecture for XML Binding）是Java的一个标准API，用于在Java对象与XML之间进行相互转换，jaxb-api是JAXB的API依赖库。-->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sky-server</artifactId>
     <dependencies>
-
+<!--另外两个模块-->
         <dependency>
             <groupId>com.sky</groupId>
             <artifactId>sky-common</artifactId>
@@ -22,7 +22,7 @@
             <artifactId>sky-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
+<!--启动依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -38,7 +38,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+<!--数据库依赖-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -49,27 +49,27 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-
+<!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
+        <!--进行序列化和反序列化-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
-
+<!--数据库连接池依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
-
+<!--分页依赖-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
         </dependency>
-
+<!--面向切面编程依赖-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
@@ -79,7 +79,7 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
         </dependency>
-
+<!--集成knife4j,生成api文档-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
@@ -115,7 +115,7 @@
             <artifactId>poi-ooxml</artifactId>
         </dependency>
     </dependencies>
-
+<!--使用springboot提供的maven插件-->
     <build>
         <plugins>
             <plugin>

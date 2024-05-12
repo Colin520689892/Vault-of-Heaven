@@ -2,26 +2,38 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--设置父项目-->
     <parent>
+<!--组件中模块的名称-->
         <artifactId>sky-take-out</artifactId>
+<!--组织名-->
         <groupId>com.sky</groupId>
+<!--版本-->
         <version>1.0-SNAPSHOT</version>
     </parent>
+<!--这个元素指定了项目对象模型（Project Object Model，POM）的版本。在Maven中，POM是用于描述项目的基本信息、构建配置和依赖管理等的XML文件。目前的版本是4.0.0，这是Maven的当前版本所采用的POM模型版本。-->
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sky-pojo</artifactId>
+
+<!--依赖-->
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+<!--作用：Jackson是一个用于在Java中处理JSON的库，jackson-databind是Jackson的一个核心模块，用于实现JSON和Java对象之间的序列化和反序列化操作。-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.9.2</version>
         </dependency>
+<!--生成api文档-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 </project>
+<!--通常情况下，如果一个模块作为父项目的子模块，那么它的版本号将会继承自父项目。在这个例子中，
+sky-pojo模块被声明为一个父项目的子模块，通过<parent>元素指定了父项目的信息，但没有显式指定版本号。
+因此，sky-pojo模块的版本号将会继承自父项目，即父项目的版本号为1.0-SNAPSHOT。这意味着sky-pojo模块的版本号也将为1.0-SNAPSHOT-->
