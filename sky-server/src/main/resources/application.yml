@@ -42,10 +42,6 @@ sky:
     admin-token-name: token
 
   alioss:
-#    endpoint: https://oss-cn-beijing.aliyuncs.com
-#    accessKeyId: LTAI5tDPKp3t7mrguKR1MpmN
-#    accessKeySecret: cZa9mberWNbPMyPBK1Ju7e2PmkvQXO
-#    bucketName: yhwbucket
     endpoint: ${sky.alioss.endpoint}
     accessKeyId: ${sky.alioss.accessKeyId}
     accessKeySecret: ${sky.alioss.accessKeySecret}
