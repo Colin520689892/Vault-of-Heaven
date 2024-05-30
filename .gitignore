@@ -1,0 +1,8 @@
+**/target/
+.idea
+*.iml
+*.class
+*Test.java
+/project-practice/Vault-of-Heaven-Takeout/back-code/sky-take-out/sky-server/src/main/resources/application.yml
+/project-practice/Vault-of-Heaven-Takeout/back-code/sky-take-out/sky-server/src/main/resources/application-dev.yml
+**/test/
