@@ -10,6 +10,8 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 @Mapper
 public interface DishMapper {
 
@@ -28,4 +30,15 @@ public interface DishMapper {
     Dish getById(Long id);
     @Delete("delete from dish where id=#{id} ")
     void deleteById(Long id);
+
+    void deleteByIds(List<Long> ids);
+    @AutoFill(value =OperationType.UPDATE)
+    void update(Dish dish);
+
+    List<Dish> list(Dish dish);
+    //left join,以左表为主表,左表有没有被套餐关联的也要查出来,查套餐中的所有菜品
+    @Select("select a.* from dish a left join setmeal_dish b on a.id = b.dish_id where b.setmeal_id = #{setmealId}")
+    List<Dish> getBySetmealId(Long setmealId);
+    @Select("select b.setmeal_id from setmeal_dish b where b.dish_id=#{id}")
+    List<Long> getStatusById(Long id);
 }
