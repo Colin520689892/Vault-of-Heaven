@@ -59,4 +59,14 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         }
       //不存在加到购物车当中
     }
+
+
+    public List<ShoppingCart> showShoppingCart() {
+        Long id=BaseContext.getCurrentId();
+        ShoppingCart s=ShoppingCart.builder()
+                        .userId(id)
+                        .build();
+        List<ShoppingCart> list=shoppingCartMapper.list(s);
+        return list;
+    }
 }
