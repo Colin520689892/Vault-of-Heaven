@@ -39,4 +39,11 @@ public class ShoppingCartController {
         shoppingCartService.cleanShoppingCart();
         return Result.success();
     }
+    @PostMapping("/sub")
+    @ApiOperation("删除购物车中的一个商品")
+    public Result subtract(@RequestBody ShoppingCartDTO shoppingCartDTO){
+        log.info("删除其中一个菜品:{}",shoppingCartDTO);
+        shoppingCartService.subtract(shoppingCartDTO);
+        return Result.success();
+    }
 }
